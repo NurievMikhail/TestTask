@@ -1,0 +1,69 @@
+.genre-block {
+  height: 208px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+
+  &__emoji {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 57px;
+    margin-bottom: 15%;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 5%;
+    color: #ffffff;
+  }
+}
+
+.😁 {
+  background: linear-gradient(127.83deg, #f2c94c 8.44%, #f29a4a 91.36%);
+  opacity: 0.8;
+  box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.😭 {
+  background: linear-gradient(127.83deg, #f2994a 8.44%, #eb5757 91.36%);
+  opacity: 0.8;
+  box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.👽 {
+  background: linear-gradient(127.83deg, #56ccf2 8.44%, #2f80ed 91.36%);
+  opacity: 0.8;
+  box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.👻 {
+  background: linear-gradient(127.83deg, #828282 8.44%, #333333 91.36%);
+  opacity: 0.8;
+  box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  &:hover {
+    opacity: 1;
+  }
+}

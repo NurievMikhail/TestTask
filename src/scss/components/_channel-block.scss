@@ -1,0 +1,35 @@
+.channel-block {
+  display: flex;
+  align-items: center;
+  height: 160px;
+  background: #f2f2f2;
+  border-radius: 8px;
+  margin: 15px;
+
+  &__logo-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+  }
+
+  &__logo {
+    height: 64px;
+  }
+
+  &__title {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+    width: 280px;
+  }
+
+  &__show {
+    margin-top: 5px;
+    span {
+      margin-right: 20px;
+    }
+  }
+}

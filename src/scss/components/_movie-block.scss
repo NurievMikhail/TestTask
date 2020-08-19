@@ -1,0 +1,55 @@
+.movie-block {
+  position: relative;
+  height: 434px;
+
+  &__image {
+    border-radius: 8px;
+    width: 280px;
+    height: 370px;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+    width: 280px;
+  }
+
+  &__overlay {
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 280px;
+    height: 370px;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: black;
+  }
+
+  &__desc {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #f2f2f2;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+  }
+
+  &:hover {
+    .movie-block__overlay {
+      opacity: 0.75;
+    }
+  }
+}
