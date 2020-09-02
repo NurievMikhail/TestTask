@@ -1,0 +1,41 @@
+.search {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 35%;
+
+  &__input {
+    color: #828282;
+    height: 25px;
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #333333;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__button {
+    width: 138px;
+    height: 38px;
+    background: inherit;
+    border: 0;
+    outline: none;
+  }
+
+  &__button-text {
+    color: #e5261e;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+  }
+}

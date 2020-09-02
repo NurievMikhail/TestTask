@@ -5,10 +5,11 @@
   border-radius: 4px;
   border: 0;
   outline: none;
+  margin-bottom: 20px;
   cursor: pointer;
 
-  span {
-    font-family: Rubik;
+  &__text {
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -32,9 +33,10 @@
   background: inherit;
   border: 0;
   outline: none;
-  span {
+
+  &__text {
     color: #e5261e;
-    font-family: Rubik;
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -46,7 +48,7 @@
 .pop-up {
   &__name {
     margin-top: 10px;
-    font-family: Rubik;
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
@@ -54,101 +56,143 @@
     text-align: right;
     color: #333333;
   }
+
+  &__text-login,
+  &__text-passwd {
+    color: #828282;
+    height: 25px;
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #333333;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 19px;
+  }
+
   &__text-login {
     position: relative;
     font-size: 20px;
     top: 10%;
     width: 90%;
+
+    &:invalid {
+      border-bottom: 1px dashed red;
+    }
   }
+
   &__text-passwd {
     position: relative;
     font-size: 20px;
-    top: 15%;
+    top: 17%;
     width: 90%;
+
+    &:invalid {
+      border-bottom: 1px dashed red;
+    }
   }
-}
 
-.pop-up__checkbox-label {
-  position: relative;
-  top: -10%;
-  left: -32%;
-  margin: auto;
-  cursor: pointer;
-  font-size: 22px;
-  line-height: 24px;
-  height: 24px;
-  width: 24px;
-  clear: both;
-}
+  &__checkbox-label {
+    position: relative;
+    top: -5%;
+    left: -32%;
+    margin: auto;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 24px;
+    height: 24px;
+    width: 24px;
+    clear: both;
 
-.pop-up__checkbox-label input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
+    .pop-up__checkbox-custom {
+      position: absolute;
+      top: 0px;
+      left: -30px;
+      height: 24px;
+      width: 24px;
+      background-color: transparent;
+      border-radius: 5px;
+      transition: all 0.3s ease-out;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      border: 2px solid #000000;
 
-.pop-up__checkbox-label .pop-up__checkbox-custom {
-  position: absolute;
-  top: 0px;
-  left: -30px;
-  height: 24px;
-  width: 24px;
-  background-color: transparent;
-  border-radius: 5px;
-  transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  border: 2px solid #000000;
-}
+      &::after {
+        position: absolute;
+        content: '';
+        left: 12px;
+        top: 12px;
+        height: 0px;
+        width: 0px;
+        border-radius: 5px;
+        border: solid #e5261e;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(0deg) scale(0);
+        -ms-transform: rotate(0deg) scale(0);
+        transform: rotate(0deg) scale(0);
+        opacity: 1;
+        transition: all 0.3s ease-out;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+      }
+    }
+  }
 
-.pop-up__checkbox-label input:checked ~ .pop-up__checkbox-custom {
-  background-color: #ffffff;
-  border-radius: 5px;
-  -webkit-transform: rotate(0deg) scale(1);
-  -ms-transform: rotate(0deg) scale(1);
-  transform: rotate(0deg) scale(1);
-  opacity: 1;
-  border: 2px solid #000000;
-}
+  &__checkbox-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
 
-.pop-up__checkbox-label .pop-up__checkbox-custom::after {
-  position: absolute;
-  content: '';
-  left: 12px;
-  top: 12px;
-  height: 0px;
-  width: 0px;
-  border-radius: 5px;
-  border: solid #e5261e;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(0deg) scale(0);
-  -ms-transform: rotate(0deg) scale(0);
-  transform: rotate(0deg) scale(0);
-  opacity: 1;
-  transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-}
+    &:checked ~ .pop-up__checkbox-custom {
+      background-color: #ffffff;
+      border-radius: 5px;
+      -webkit-transform: rotate(0deg) scale(1);
+      -ms-transform: rotate(0deg) scale(1);
+      transform: rotate(0deg) scale(1);
+      opacity: 1;
+      border: 2px solid #000000;
+    }
 
-.pop-up__checkbox-label input:checked ~ .pop-up__checkbox-custom::after {
-  -webkit-transform: rotate(45deg) scale(1);
-  -ms-transform: rotate(45deg) scale(1);
-  transform: rotate(45deg) scale(1);
-  opacity: 1;
-  left: 6px;
-  top: 1px;
-  width: 6px;
-  height: 12px;
-  border: solid #e5261e;
-  border-width: 0 2px 2px 0;
-  background-color: transparent;
-  border-radius: 0;
+    &:checked ~ .pop-up__checkbox-custom::after {
+      -webkit-transform: rotate(45deg) scale(1);
+      -ms-transform: rotate(45deg) scale(1);
+      transform: rotate(45deg) scale(1);
+      opacity: 1;
+      left: 6px;
+      top: 1px;
+      width: 6px;
+      height: 12px;
+      border: solid #e5261e;
+      border-width: 0 2px 2px 0;
+      background-color: transparent;
+      border-radius: 0;
+    }
+  }
 }
 
 .username-input {
   width: 50%;
+  color: #828282;
+  height: 25px;
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #333333;
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 19px;
+
+  &:invalid {
+    border-bottom: 1px dashed red;
+  }
 }

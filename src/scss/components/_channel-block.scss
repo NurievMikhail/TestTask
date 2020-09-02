@@ -17,7 +17,7 @@
   }
 
   &__title {
-    font-family: Rubik;
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -28,8 +28,10 @@
 
   &__show {
     margin-top: 5px;
-    span {
-      margin-right: 20px;
-    }
+  }
+
+  &__show-time,
+  &__show-name {
+    margin-right: 20px;
   }
 }

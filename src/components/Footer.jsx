@@ -3,8 +3,9 @@ import React from 'react';
 function Footer() {
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="footer__container">
         <svg
+          className="footer__logo"
           width="33"
           height="64"
           viewBox="0 0 33 64"
@@ -18,11 +19,13 @@ function Footer() {
           />
         </svg>
         <div className="footer__text">
-          <span>
+          <span className="footer__address">
             426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)
           </span>
-          <span>+7 (3412) 93-88-61, 43-29-29</span>
-          <a href="https://htc-cs.ru/">htc-cs.ru</a>
+          <span className="footer__phone-number">+7 (3412) 93-88-61, 43-29-29</span>
+          <a className="footer__website" href="https://htc-cs.ru/">
+            htc-cs.ru
+          </a>
         </div>
       </div>
     </footer>

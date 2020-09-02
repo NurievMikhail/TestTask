@@ -7,11 +7,11 @@ function Channel({ channelName, channelLogo, channelPlan }) {
         <img className="channel-block__logo" src={channelLogo} alt="Channel logo" />
       </div>
       <div>
-        <span className="channel-block__title">{channelName}</span>
+        <h2 className="channel-block__title">{channelName}</h2>
         {channelPlan.map(({ time, show }, index) => (
           <div key={`${time}_${show}`} className="channel-block__show">
-            <span>{time}</span>
-            <span>{show}</span>
+            <span className="channel-block__show-time">{time}</span>
+            <span className="channel-block__show-name">{show}</span>
           </div>
         ))}
       </div>

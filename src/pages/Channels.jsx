@@ -58,16 +58,17 @@ function Channels() {
 
   return (
     <main className="container">
-      <div className="channels-list">
+      <ul className="channels-list">
         {CHANNELS.map(({ channelName, channelLogo, channelPlan }, index) => (
-          <Channel
-            key={`${channelName}_${index}`}
-            channelName={channelName}
-            channelLogo={channelLogo}
-            channelPlan={channelPlan}
-          />
+          <li key={`${channelName}_${index}`}>
+            <Channel
+              channelName={channelName}
+              channelLogo={channelLogo}
+              channelPlan={channelPlan}
+            />
+          </li>
         ))}
-      </div>
+      </ul>
     </main>
   );
 }

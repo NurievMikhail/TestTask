@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { AuthButton, Search } from './';
+import { Auth, Search } from './';
 
 function Header() {
   return (
     <header className="header">
-      <div className="container">
+      <div className="header__container">
         <div className="header__logo">
           <svg
             width="38"
@@ -21,10 +21,10 @@ function Header() {
             />
           </svg>
 
-          <h3 className="">Видеосервис</h3>
+          <h1 className="header__title">Видеосервис</h1>
         </div>
         <Search />
-        <AuthButton />
+        <Auth />
       </div>
     </header>
   );

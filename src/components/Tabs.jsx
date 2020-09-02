@@ -15,16 +15,16 @@ function Tabs() {
 
   return (
     <div className="tabs">
-      <ul>
+      <ul className="tabs__list">
         {TABS.map(({ tabName, tabRoute }, index) => (
-          <Link key={`link_${tabName}_${index}`} to={tabRoute}>
-            <li
-              className={activeTab === index ? 'active' : ''}
-              onClick={() => changeActiveTab(index)}
-              key={`${tabName}_${index}`}>
+          <li
+            className={`tabs__element ${activeTab === index ? 'tabs__element_active' : ''}`}
+            onClick={() => changeActiveTab(index)}
+            key={`${tabName}_${index}`}>
+            <Link key={`link_${tabName}_${index}`} to={tabRoute}>
               {tabName}
-            </li>
-          </Link>
+            </Link>
+          </li>
         ))}
       </ul>
     </div>

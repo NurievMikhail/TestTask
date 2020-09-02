@@ -2,12 +2,17 @@ import React from 'react';
 
 function Search() {
   return (
-    <div className="search">
-      <input placeholder="Поиск..." />
+    <form className="search">
+      <input
+        className="search__input"
+        maxLength="30"
+        pattern="[а-яА-ЯёЁa-zA-Z0-9.,!?]+[а-яА-ЯёЁa-zA-Z0-9.,!? ]*"
+        placeholder="Поиск..."
+      />
       <button className="search__button">
-        <span>Найти</span>
+        <span className="search__button-text">Найти</span>
       </button>
-    </div>
+    </form>
   );
 }
 

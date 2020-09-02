@@ -52,23 +52,22 @@ function Movies() {
 
   return (
     <main className="container">
-      <h4 className="content__title">🔥 Новинки</h4>
-      <div className="content__items">
+      <h2 className="content__title">🔥 Новинки</h2>
+      <ul className="content__items">
         {NEW_MOVIES.map(({ movieName, movieImg, movieDesc }, index) => (
-          <Movie
-            key={`${movieName}_${index}`}
-            movieName={movieName}
-            movieImg={movieImg}
-            movieDesc={movieDesc}
-          />
+          <li key={`${movieName}_${index}`}>
+            <Movie movieName={movieName} movieImg={movieImg} movieDesc={movieDesc} />
+          </li>
         ))}
-      </div>
-      <h4 className="content__title">Жанры</h4>
-      <div className="content__items">
+      </ul>
+      <h2 className="content__title">Жанры</h2>
+      <ul className="content__items">
         {GENRES.map(({ genreName, genreEmoji }, index) => (
-          <Genre key={`${genreName}_${index}`} genreName={genreName} genreEmoji={genreEmoji} />
+          <li key={`${genreName}_${index}`}>
+            <Genre genreName={genreName} genreEmoji={genreEmoji} />
+          </li>
         ))}
-      </div>
+      </ul>
     </main>
   );
 }
